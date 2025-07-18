@@ -1,6 +1,5 @@
 ################################################################################
-# requirements.txt  –  Clinical-Trial Dashboard V3
-# Pin or widen versions as you like; these have been tested on Streamlit Cloud
+# requirements.txt  –  Clinical-Trial Dashboard V3  (Streamlit Cloud ready)
 ################################################################################
 
 # --- Core app ---------------------------------------------------------------
@@ -12,7 +11,9 @@ numpy>=1.26               # numeric helper for pandas
 openpyxl>=3.1             # pandas uses this to read/write .xlsx
 
 # --- PDF invoice generation -------------------------------------------------
-reportlab>=4.2            # 1-page claim PDFs
+fpdf2>=2.7            # FPDF class used in invoice_pdf.py
+# If you have legacy code that still uses ReportLab, keep this as well:
+# reportlab>=4.2         
 
 # --- Image / receipt handling ----------------------------------------------
 Pillow>=10.3              # JPG/PNG previews
@@ -23,7 +24,7 @@ altair>=5.2               # quick charts via st.altair_chart (lightweight)
 # plotly>=5.22
 
 # --- Security utilities -----------------------------------------------------
-python-dotenv>=1.0        # (if you store secrets in a .env file)
+python-dotenv>=1.0        # (only if you store secrets in a .env file)
 
 ################################################################################
 # End of file – Streamlit Cloud installs all of the above in a fresh venv
